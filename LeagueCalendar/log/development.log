@@ -6,3 +6,20 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 132ms (Views: 59.9ms | ActiveRecord: 0.0ms | Allocations: 4916)
 
 
+Started GET "/" for ::1 at 2022-05-19 14:46:11 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tucker/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tucker/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 527)
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3601)
+
+
+Started GET "/index" for ::1 at 2022-05-19 14:46:17 -0700
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 502.8ms | Allocations: 89707)
+Completed 200 OK in 506ms (Views: 504.6ms | ActiveRecord: 0.0ms | Allocations: 90758)
+
+
