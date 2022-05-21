@@ -1,5 +1,6 @@
-<h1>Index#index</h1>
+<h1>League Winrate Calendar</h1>
 
-<h1>Hello Rails</h1>
-
-<p>Find me in app/views/index/index.html.erb</p>
+<%= SimpleCalendar::LeagueWLCalendar.new(self, {}).render do |date| %>
+    <%= date %>
+    <p>Hello</p>
+<% end %>
