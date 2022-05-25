@@ -14,7 +14,7 @@ module LolCal
             self.response_body = render_to_body(options)
         end
 
-        def array_func
+        def self.array_func
             array = [1, 2, 3, 4]
         end
 

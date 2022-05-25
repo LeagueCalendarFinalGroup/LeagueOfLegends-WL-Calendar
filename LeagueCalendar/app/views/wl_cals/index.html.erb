@@ -1,12 +1,21 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Wl cals</h1>
+
+<%= form_with scope: "cals", url: update_calendar_path, method: :put do |form| %>
+    <%= form.text_field :month %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @cal_params %>
 
 <table>
 
     <tr>
     <% @days.each do |show| %>
-        <td> <%= show %> </td>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
     <% end %>
-    </tr>
+    
 </table>

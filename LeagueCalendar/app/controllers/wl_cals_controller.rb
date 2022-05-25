@@ -5,7 +5,10 @@ class WlCalsController < ApplicationController
       @days = WlCal::all_days()
     end
 
-    def create 
+    def update_calendar
+    end
 
+    def cal_params 
+      params.require(:cals).permit(:month).to_h
     end
   end
