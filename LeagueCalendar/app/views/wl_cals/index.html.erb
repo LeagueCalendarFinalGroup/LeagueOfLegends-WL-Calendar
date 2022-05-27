@@ -1,11 +1,11 @@
 <h1>Wl cals</h1>
 
-<%= form_with scope: "cals", url: update_calendar_path, method: :put do |form| %>
-    <%= form.text_field :month %>
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2]] %>
     <%= form.submit "Search" %>
 <% end %>
 
-<%= @cal_params %>
+<%= @month %>
 
 <table>
 

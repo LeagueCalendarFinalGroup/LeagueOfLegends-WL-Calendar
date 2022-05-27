@@ -4571,3 +4571,1271 @@ Processing by WlCalsController#index as HTML
 Completed 200 OK in 11ms (Views: 8.3ms | Allocations: 3162)
 
 
+Started GET "/cal" for ::1 at 2022-05-27 09:45:42 -0700
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 400 Bad Request in 81ms (ActiveRecord: 0.0ms | Allocations: 2234)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cals):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:48:00 -0700
+  
+SyntaxError (F:/CSTCode/223/Final/LeagueOfLegendsCalendar/LeagueCalendar/app/controllers/wl_cals_controller.rb:16: syntax error, unexpected end-of-input, expecting `end'
+  end
+     ^
+):
+  
+app/controllers/wl_cals_controller.rb:16: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/wl_cals_controller.rb:16: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/wl_cals_controller.rb:16: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/cal" for ::1 at 2022-05-27 09:48:12 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 9ms (Allocations: 1923)
+
+
+  
+NoMethodError (undefined method `to_h' for :month:Symbol
+
+      if @params.require(:cals.permit(:month.to_h))
+                                            ^^^^^
+Did you mean?  to_s):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:48:22 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 1809)
+
+
+  
+NoMethodError (undefined method `permit' for :cals:Symbol
+
+      if @params.require(:cals.permit(:month.to_s))
+                              ^^^^^^^):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:48:34 -0700
+  
+SyntaxError (F:/CSTCode/223/Final/LeagueOfLegendsCalendar/LeagueCalendar/app/controllers/wl_cals_controller.rb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...ire(:cals.permit(:month).to_s))
+...                              ^
+F:/CSTCode/223/Final/LeagueOfLegendsCalendar/LeagueCalendar/app/controllers/wl_cals_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/controllers/wl_cals_controller.rb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/controllers/wl_cals_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+app/controllers/wl_cals_controller.rb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/controllers/wl_cals_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+app/controllers/wl_cals_controller.rb:13: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/controllers/wl_cals_controller.rb:17: syntax error, unexpected `end', expecting end-of-input
+Started GET "/cal" for ::1 at 2022-05-27 09:48:45 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 1808)
+
+
+  
+NoMethodError (undefined method `permit' for :cals:Symbol
+
+      if @params.require(:cals.permit(:month).to_s)
+                              ^^^^^^^):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:48:58 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 1744)
+
+
+  
+NoMethodError (private method `require' called for nil:NilClass
+
+      if @params.require(:cals).permit(:month).to_s
+                ^^^^^^^^):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:49:12 -0700
+Processing by WlCalsController#index as HTML
+Completed 400 Bad Request in 6ms (Allocations: 1058)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cals):
+  
+app/controllers/wl_cals_controller.rb:13:in `cal_params'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 09:55:48 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 871)
+
+
+  
+SyntaxError (F:/CSTCode/223/Final/LeagueOfLegendsCalendar/LeagueCalendar/app/models/wl_cal.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    before-save :default_values
+                ^
+):
+  
+app/models/wl_cal.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/wl_cal.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/wl_cal.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:20:37 -0700
+Processing by WlCalsController#index as HTML
+Completed 400 Bad Request in 9ms (Allocations: 1129)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cals):
+  
+app/controllers/wl_cals_controller.rb:11:in `cal_params'
+app/controllers/wl_cals_controller.rb:7:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:21:22 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5306)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5409)
+Completed 500 Internal Server Error in 30ms (Allocations: 6973)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass
+
+        container.map do |element|
+                 ^^^^):
+    1: <h1>Wl cals</h1>
+    2: 
+    3: <%= form_with scope: "cals", url: update_calendar_path, method: :put do |form| %>
+    4:     <%= form.select [["January", 1], ["Febuary", 2]] %>
+    5:     <%= form.submit "Search" %>
+    6: <% end %>
+    7: 
+  
+app/views/wl_cals/index.html.erb:4
+app/views/wl_cals/index.html.erb:3
+Started GET "/cal" for ::1 at 2022-05-27 10:21:50 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 516.3ms | Allocations: 37920)
+Completed 200 OK in 526ms (Views: 522.2ms | Allocations: 38821)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:21:55 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:21:55 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 641)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3062)
+Completed 200 OK in 11ms (Views: 7.9ms | Allocations: 3425)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:05 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:22:05 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 588)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2910)
+Completed 200 OK in 11ms (Views: 8.6ms | Allocations: 3232)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:19 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:22:19 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2903)
+Completed 200 OK in 16ms (Views: 12.1ms | Allocations: 3225)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:19 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:19 -0700
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:20 -0700
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:21 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:22:21 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:22:32 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2919)
+Completed 200 OK in 13ms (Views: 10.2ms | Allocations: 3241)
+
+
+Started GET "/cal/update_calendar" for ::1 at 2022-05-27 10:22:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/cal/update_calendar"):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:23:26 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1080)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3765)
+Completed 200 OK in 19ms (Views: 14.7ms | Allocations: 4603)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:23:29 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:23:29 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 572)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2894)
+Completed 200 OK in 12ms (Views: 9.3ms | Allocations: 3239)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:23:39 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1434)
+Completed 500 Internal Server Error in 12ms (Allocations: 2247)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with scope: "cals", url: update_calendar_path, method: :put do |form| %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2]] %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month. %>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with scope: "cals", url: update_calendar_path, method: :put do |form| %>
+4:        <%= form.select :month, [["January", 1], ["Febuary", 2]] %>
+5:        <%= form.submit "Search" %>
+6:    <% end %>
+7:    
+8:    <%= @month. %>
+9:    
+10:    <table>
+11:    
+12:        <tr>
+13:        <% @days.each do |show| %>
+14:            <tr>
+15:                <td> <%= show.dayNumber %> </td>
+16:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+17:                <br>
+18:            </tr>
+19:        <% end %>
+20:        
+21:    </table>
+  
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected ')'
+app/views/wl_cals/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 10:23:50 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3774)
+Completed 200 OK in 22ms (Views: 17.9ms | Allocations: 4635)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:23:51 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:23:51 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2918)
+Completed 200 OK in 14ms (Views: 11.0ms | Allocations: 3263)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:23:54 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:23:54 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2918)
+Completed 200 OK in 13ms (Views: 9.2ms | Allocations: 3240)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:25:06 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3766)
+Completed 200 OK in 19ms (Views: 14.7ms | Allocations: 4605)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:25:09 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:25:09 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2907)
+Completed 200 OK in 11ms (Views: 8.2ms | Allocations: 3252)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:25:46 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3213)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3307)
+Completed 500 Internal Server Error in 11ms (Allocations: 4469)
+
+
+  
+ActionView::Template::Error (undefined method `to_i' for #<ActionController::Parameters {} permitted: true>
+Did you mean?  to_h
+               to_s):
+     5:     <%= form.submit "Search" %>
+     6: <% end %>
+     7: 
+     8: <%= @month.to_i %>
+     9: 
+    10: <table>
+    11: 
+  
+app/views/wl_cals/index.html.erb:8
+Started GET "/cal" for ::1 at 2022-05-27 10:27:15 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1094)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 15623)
+Completed 200 OK in 45ms (Views: 38.3ms | Allocations: 17137)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:27:19 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:27:19 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 588)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2910)
+Completed 200 OK in 11ms (Views: 8.3ms | Allocations: 3254)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:27:23 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:27:23 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2916)
+Completed 200 OK in 12ms (Views: 9.1ms | Allocations: 3238)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:28:07 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 806)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 15142)
+Completed 200 OK in 40ms (Views: 33.8ms | Allocations: 16341)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:28:11 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:28:11 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2916)
+Completed 200 OK in 11ms (Views: 8.2ms | Allocations: 3260)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:28:13 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:28:13 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 573)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2895)
+Completed 200 OK in 11ms (Views: 8.3ms | Allocations: 3217)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:28:15 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:28:15 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 582)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2904)
+Completed 200 OK in 11ms (Views: 8.1ms | Allocations: 3226)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:28:31 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 15122)
+Completed 200 OK in 43ms (Views: 36.6ms | Allocations: 16322)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:28:34 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:28:34 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2901)
+Completed 200 OK in 11ms (Views: 8.3ms | Allocations: 3246)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:28:35 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:28:35 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 588)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2910)
+Completed 200 OK in 11ms (Views: 8.4ms | Allocations: 3233)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:29:41 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 13ms (Allocations: 5641)
+
+
+  
+NameError (undefined local variable or method `params' for WlCal:Class):
+  
+app/models/wl_cal.rb:10:in `returnCal'
+app/controllers/wl_cals_controller.rb:7:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:30:41 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 1006)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/wl_cals_controller.rb:7:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:30:55 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 9ms (Allocations: 1104)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/wl_cals_controller.rb:7:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:31:22 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 9ms (Allocations: 1073)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/wl_cal.rb:9:in `returnCal'
+app/controllers/wl_cals_controller.rb:7:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:31:54 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 3252)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3346)
+Completed 500 Internal Server Error in 17ms (Allocations: 4780)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: <table>
+    11: 
+    12:     <tr>
+    13:     <% @dayss.each do |show| %>
+    14:         <tr>
+    15:             <td> <%= show.dayNumber %> </td>
+    16:             <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+  
+app/views/wl_cals/index.html.erb:13
+Started GET "/cal" for ::1 at 2022-05-27 10:32:04 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1066)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 15596)
+Completed 200 OK in 43ms (Views: 39.2ms | Allocations: 16452)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:32:14 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 15121)
+Completed 200 OK in 40ms (Views: 31.7ms | Allocations: 16373)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:32:16 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:32:17 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 588)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2910)
+Completed 200 OK in 12ms (Views: 9.0ms | Allocations: 3237)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:32:43 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 15123)
+Completed 200 OK in 38ms (Views: 31.8ms | Allocations: 16302)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:32:54 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 3672)
+
+
+  
+NoMethodError (undefined method `put' for #<WlCalsController:0x0000000006df38>
+
+    put @month
+    ^^^
+Did you mean?  puts
+               putc):
+  
+app/controllers/wl_cals_controller.rb:8:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 10:33:01 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 15118)
+Completed 200 OK in 38ms (Views: 32.6ms | Allocations: 16300)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:04 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:04 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2907)
+Completed 200 OK in 11ms (Views: 8.4ms | Allocations: 3234)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:10 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:10 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 609)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2931)
+Completed 200 OK in 11ms (Views: 8.0ms | Allocations: 3236)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:11 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:11 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 576)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2898)
+Completed 200 OK in 12ms (Views: 9.3ms | Allocations: 3204)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:12 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:12 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 576)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2899)
+Completed 200 OK in 12ms (Views: 8.9ms | Allocations: 3204)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:13 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:13 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 573)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2895)
+Completed 200 OK in 11ms (Views: 8.0ms | Allocations: 3200)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:14 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:14 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2914)
+Completed 200 OK in 12ms (Views: 9.4ms | Allocations: 3220)
+
+
+Started PUT "/cal/update_calendar" for ::1 at 2022-05-27 10:33:14 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:17 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2912)
+Completed 200 OK in 17ms (Views: 12.2ms | Allocations: 3217)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:33:28 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 790)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 15096)
+Completed 200 OK in 41ms (Views: 34.4ms | Allocations: 16277)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:33:30 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:31 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 582)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2904)
+Completed 200 OK in 11ms (Views: 8.5ms | Allocations: 3231)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:33:32 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:32 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2916)
+Completed 200 OK in 11ms (Views: 8.2ms | Allocations: 3221)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:33:32 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:33 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2913)
+Completed 200 OK in 12ms (Views: 8.6ms | Allocations: 3218)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:33:34 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:34 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2913)
+Completed 200 OK in 11ms (Views: 7.9ms | Allocations: 3218)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:33:46 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:33:46 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 609)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2931)
+Completed 200 OK in 11ms (Views: 7.8ms | Allocations: 3236)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:35:18 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 15149)
+Completed 200 OK in 44ms (Views: 37.7ms | Allocations: 16311)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:37:05 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:37:05 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2926)
+Completed 200 OK in 12ms (Views: 8.8ms | Allocations: 3241)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:37:29 -0700
+  
+ActionController::RoutingError (uninitialized constant WlCalController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  WlCalsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/cal" for ::1 at 2022-05-27 10:37:31 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 15147)
+Completed 200 OK in 41ms (Views: 35.5ms | Allocations: 16306)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:38:46 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 15123)
+Completed 200 OK in 40ms (Views: 34.2ms | Allocations: 16282)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:39:38 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"2"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2741)
+Completed 200 OK in 57ms (Views: 53.2ms | Allocations: 3334)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:40:59 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"2"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 560)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 14896)
+Completed 200 OK in 47ms (Views: 38.3ms | Allocations: 16430)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:41:05 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"1"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2735)
+Completed 200 OK in 11ms (Views: 8.2ms | Allocations: 3311)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:41:07 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2913)
+Completed 200 OK in 12ms (Views: 8.9ms | Allocations: 3220)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:41:09 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"1"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2731)
+Completed 200 OK in 11ms (Views: 8.0ms | Allocations: 3249)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:41:10 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"1"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2730)
+Completed 200 OK in 10ms (Views: 7.6ms | Allocations: 3248)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:41:11 -0700
+Processing by WlCalsController#index as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"1"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2730)
+Completed 200 OK in 11ms (Views: 7.8ms | Allocations: 3245)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:43:07 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1114)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3799)
+Completed 200 OK in 18ms (Views: 14.0ms | Allocations: 4649)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:43:27 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1817)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 38634)
+Completed 200 OK in 155ms (Views: 137.7ms | ActiveRecord: 0.0ms | Allocations: 42391)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:43:30 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cals"=>{"month"=>"1"}, "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2934)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3604)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 10:44:18 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1639)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4325)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 5188)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:44:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3279)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3820)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 10:44:23 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"2", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3292)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3805)
+
+
