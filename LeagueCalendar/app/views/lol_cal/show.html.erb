@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wl_cal %>
+
+<div>
+  <%= link_to "Edit this wl cal", edit_wl_cal_path(@wl_cal) %> |
+  <%= link_to "Back to wl cals", wl_cals_path %>
+
+  <%= button_to "Destroy this wl cal", @wl_cal, method: :delete %>
+</div>

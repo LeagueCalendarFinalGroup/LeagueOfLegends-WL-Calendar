@@ -1,0 +1,17 @@
+<%= form_with(model: wl_cal) do |form| %>
+  <% if wl_cal.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wl_cal.errors.count, "error") %> prohibited this wl_cal from being saved:</h2>
+
+      <ul>
+        <% wl_cal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

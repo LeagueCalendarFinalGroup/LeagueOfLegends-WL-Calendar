@@ -1,7 +1,6 @@
 *.rbc
 capybara-*.html
 .rspec
-*.cache
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
@@ -9,6 +8,7 @@ capybara-*.html
 /coverage/
 /spec/tmp
 *.orig
+*.cache
 rerun.txt
 pickle-email-*.html
 
@@ -66,3 +66,6 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+# Ignore Cache
+/tmp/cache
