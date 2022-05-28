@@ -5839,3 +5839,1052 @@ Processing by WlCalsController#index as HTML
 Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3805)
 
 
+Started GET "/cal" for 127.0.0.1 at 2022-05-27 11:22:27 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1981)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2094)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 5863)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5],
+    ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year, in 2010 .. Date.today.year%>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner%>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5],
+6:        ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+7:        <%= form.label :year "Year" %>
+8:        <%= form.number_field :year, in 2010 .. Date.today.year%>
+9:        <%= form.label :summoner "SummonerName" %>
+10:        <%= form.text_field :summoner %>
+11:        <%= form.submit "Search" %>
+12:    <% end %>
+13:    
+14:    <%= @month %>
+15:    <%= @year %>
+16:    <%= @summoner%>
+17:    
+18:    <table>
+19:    
+20:        <tr>
+21:        <% @days.each do |show| %>
+22:            <tr>
+23:                <td> <%= show.dayNumber %> </td>
+24:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+25:                <br>
+26:            </tr>
+27:        <% end %>
+28:        
+29:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:9: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:23:45 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1571)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2416)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year, in 2010..2022%>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner%>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <%= form.label :year "Year" %>
+7:        <%= form.number_field :year, in 2010..2022%>
+8:        <%= form.label :summoner "SummonerName" %>
+9:        <%= form.text_field :summoner %>
+10:        <%= form.submit "Search" %>
+11:    <% end %>
+12:    
+13:    <%= @month %>
+14:    <%= @year %>
+15:    <%= @summoner%>
+16:    
+17:    <table>
+18:    
+19:        <tr>
+20:        <% @days.each do |show| %>
+21:            <tr>
+22:                <td> <%= show.dayNumber %> </td>
+23:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+24:                <br>
+25:            </tr>
+26:        <% end %>
+27:        
+28:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:23:45 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1571)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2412)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year, in 2010..2022%>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner%>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <%= form.label :year "Year" %>
+7:        <%= form.number_field :year, in 2010..2022%>
+8:        <%= form.label :summoner "SummonerName" %>
+9:        <%= form.text_field :summoner %>
+10:        <%= form.submit "Search" %>
+11:    <% end %>
+12:    
+13:    <%= @month %>
+14:    <%= @year %>
+15:    <%= @summoner%>
+16:    
+17:    <table>
+18:    
+19:        <tr>
+20:        <% @days.each do |show| %>
+21:            <tr>
+22:                <td> <%= show.dayNumber %> </td>
+23:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+24:                <br>
+25:            </tr>
+26:        <% end %>
+27:        
+28:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:7: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:24:13 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1571)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2412)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year%>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner%>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <%= form.label :year "Year" %>
+7:        <%= form.number_field :year%>
+8:        <%= form.label :summoner "SummonerName" %>
+9:        <%= form.text_field :summoner %>
+10:        <%= form.submit "Search" %>
+11:    <% end %>
+12:    
+13:    <%= @month %>
+14:    <%= @year %>
+15:    <%= @summoner%>
+16:    
+17:    <table>
+18:    
+19:        <tr>
+20:        <% @days.each do |show| %>
+21:            <tr>
+22:                <td> <%= show.dayNumber %> </td>
+23:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+24:                <br>
+25:            </tr>
+26:        <% end %>
+27:        
+28:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:24:33 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1571)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2412)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year %>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner%>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <%= form.label :year "Year" %>
+7:        <%= form.number_field :year %>
+8:        <%= form.label :summoner "SummonerName" %>
+9:        <%= form.text_field :summoner %>
+10:        <%= form.submit "Search" %>
+11:    <% end %>
+12:    
+13:    <%= @month %>
+14:    <%= @year %>
+15:    <%= @summoner%>
+16:    
+17:    <table>
+18:    
+19:        <tr>
+20:        <% @days.each do |show| %>
+21:            <tr>
+22:                <td> <%= show.dayNumber %> </td>
+23:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+24:                <br>
+25:            </tr>
+26:        <% end %>
+27:        
+28:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:24:44 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1569)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <%= form.label :year "Year" %>
+    <%= form.number_field :year %>
+    <%= form.label :summoner "SummonerName" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner %>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <%= form.label :year "Year" %>
+7:        <%= form.number_field :year %>
+8:        <%= form.label :summoner "SummonerName" %>
+9:        <%= form.text_field :summoner %>
+10:        <%= form.submit "Search" %>
+11:    <% end %>
+12:    
+13:    <%= @month %>
+14:    <%= @year %>
+15:    <%= @summoner %>
+16:    
+17:    <table>
+18:    
+19:        <tr>
+20:        <% @days.each do |show| %>
+21:            <tr>
+22:                <td> <%= show.dayNumber %> </td>
+23:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+24:                <br>
+25:            </tr>
+26:        <% end %>
+27:        
+28:    </table>
+  
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:4: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:6: syntax error, unexpected string literal, expecting ')'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected string literal, expecting ')'
+Started GET "/cal" for ::1 at 2022-05-27 11:26:00 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 151.5ms | Allocations: 14745)
+  Rendered layout layouts/application.html.erb (Duration: 228.7ms | Allocations: 51588)
+Completed 200 OK in 237ms (Views: 233.4ms | ActiveRecord: 0.0ms | Allocations: 52492)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:26:14 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 4310)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6995)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 7891)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:26:22 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 4333)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 7018)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 7885)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 11:26:29 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"", "summoner"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3561)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5983)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6664)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 11:26:39 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 3478)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5787)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 6303)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:27:12 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1576)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2413)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month, "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <br>
+    <%= form.label :year, "Year" %>
+    <%= form.number_field :year, in 2010..Date.today.year %>
+    <br>
+    <%= form.label :summoner, "Summoner Name" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner %>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month, "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <br>
+7:        <%= form.label :year, "Year" %>
+8:        <%= form.number_field :year, in 2010..Date.today.year %>
+9:        <br>
+10:        <%= form.label :summoner, "Summoner Name" %>
+11:        <%= form.text_field :summoner %>
+12:        <%= form.submit "Search" %>
+13:    <% end %>
+14:    
+15:    <%= @month %>
+16:    <%= @year %>
+17:    <%= @summoner %>
+18:    
+19:    <table>
+20:    
+21:        <tr>
+22:        <% @days.each do |show| %>
+23:            <tr>
+24:                <td> <%= show.dayNumber %> </td>
+25:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+26:                <br>
+27:            </tr>
+28:        <% end %>
+29:        
+30:    </table>
+  
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+app/views/wl_cals/index.html.erb:8: syntax error, unexpected `in'
+Started GET "/cal" for ::1 at 2022-05-27 11:27:31 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 4336)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7036)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 7899)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 11:27:42 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2010", "summoner"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3500)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5807)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 6337)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:29:50 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1571)
+Completed 500 Internal Server Error in 10ms (Allocations: 2379)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month, "Month" %>
+    <%= form.select :month, :required => true,  [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <br>
+    <%= form.label :year, "Year" %>
+    <%= form.number_field :year, in: 2010..Date.today.year %>
+    <br>
+    <%= form.label :summoner, "Summoner Name" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner %>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month, "Month" %>
+5:        <%= form.select :month, :required => true,  [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+6:        <br>
+7:        <%= form.label :year, "Year" %>
+8:        <%= form.number_field :year, in: 2010..Date.today.year %>
+9:        <br>
+10:        <%= form.label :summoner, "Summoner Name" %>
+11:        <%= form.text_field :summoner %>
+12:        <%= form.submit "Search" %>
+13:    <% end %>
+14:    
+15:    <%= @month %>
+16:    <%= @year %>
+17:    <%= @summoner %>
+18:    
+19:    <table>
+20:    
+21:        <tr>
+22:        <% @days.each do |show| %>
+23:            <tr>
+24:                <td> <%= show.dayNumber %> </td>
+25:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+26:                <br>
+27:            </tr>
+28:        <% end %>
+29:        
+30:    </table>
+  
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/wl_cals/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/wl_cals/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+Started POST "/__web_console/repl_sessions/133123d5f313a08cea80efefb72957e9/trace" for ::1 at 2022-05-27 11:30:06 -0700
+Started GET "/cal" for ::1 at 2022-05-27 11:30:23 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2042)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2136)
+Completed 500 Internal Server Error in 12ms (Allocations: 2965)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Array into Hash):
+    2: 
+    3: <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    4:     <%= form.label :month, "Month" %>
+    5:     <%= form.select :month, :required,  [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    6:     <br>
+    7:     <%= form.label :year, "Year" %>
+    8:     <%= form.number_field :year, in: 2010..Date.today.year %>
+  
+app/views/wl_cals/index.html.erb:5
+app/views/wl_cals/index.html.erb:3
+Started GET "/cal" for ::1 at 2022-05-27 11:30:36 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4341)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 7041)
+Completed 200 OK in 19ms (Views: 15.1ms | Allocations: 7894)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:31:14 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1571)
+Completed 500 Internal Server Error in 11ms (Allocations: 2401)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month, "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]], :required true %>
+    <br>
+    <%= form.label :year, "Year" %>
+    <%= form.number_field :year, in: 2010..Date.today.year %>
+    <br>
+    <%= form.label :summoner, "Summoner Name" %>
+    <%= form.text_field :summoner %>
+    <%= form.submit "Search" %>
+<% end %>
+
+<%= @month %>
+<%= @year %>
+<%= @summoner %>
+
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
+
+):
+1:    <h1>Wl cals</h1>
+2:    
+3:    <%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+4:        <%= form.label :month, "Month" %>
+5:        <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]], :required true %>
+6:        <br>
+7:        <%= form.label :year, "Year" %>
+8:        <%= form.number_field :year, in: 2010..Date.today.year %>
+9:        <br>
+10:        <%= form.label :summoner, "Summoner Name" %>
+11:        <%= form.text_field :summoner %>
+12:        <%= form.submit "Search" %>
+13:    <% end %>
+14:    
+15:    <%= @month %>
+16:    <%= @year %>
+17:    <%= @summoner %>
+18:    
+19:    <table>
+20:    
+21:        <tr>
+22:        <% @days.each do |show| %>
+23:            <tr>
+24:                <td> <%= show.dayNumber %> </td>
+25:                <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+26:                <br>
+27:            </tr>
+28:        <% end %>
+29:        
+30:    </table>
+  
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+app/views/wl_cals/index.html.erb:5: syntax error, unexpected `true', expecting ')'
+Started POST "/__web_console/repl_sessions/774395b3edf988fcea0ef5bf7ef5ca15/trace" for ::1 at 2022-05-27 11:31:19 -0700
+Started GET "/cal" for ::1 at 2022-05-27 11:31:32 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4330)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 7030)
+Completed 200 OK in 19ms (Views: 15.0ms | Allocations: 7883)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 11:31:34 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"", "summoner"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3501)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5820)
+Completed 200 OK in 12ms (Views: 9.2ms | Allocations: 6355)
+
+
+Started GET "/cal" for ::1 at 2022-05-27 11:32:23 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 4333)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7018)
+Completed 200 OK in 23ms (Views: 18.7ms | Allocations: 7853)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 11:32:32 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2010", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 3505)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5824)
+Completed 200 OK in 12ms (Views: 9.3ms | Allocations: 6356)
+
+
+Started GET "/cal" for 127.0.0.1 at 2022-05-27 15:37:32 -0700
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 3565)
+
+
+  
+NameError (uninitialized constant WlCalsController::LeagueCalendarClass
+
+    @days = LeagueCalendarClass::cal_Data(params[:month], params[:year], params[:summoner])
+            ^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 15:37:46 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2376)
+
+
+  
+NameError (uninitialized constant WlCalsController::LeagueCalendarClass
+
+    @days = LeagueCalendarClass::cal_Data(params[:month], params[:year], params[:summoner])
+            ^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 15:38:15 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2280)
+
+
+  
+NameError (uninitialized constant LolCal::LeagueCalendarClass::Day
+
+            array = [Day.new(month, "red", 1), Day.new(year, "Green", 2)]
+                     ^^^
+Did you mean?  Date):
+  
+lib/lol_cal/league_calendar_class.rb:9:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 15:38:42 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2205)
+
+
+  
+NameError (uninitialized constant LolCal::LeagueCalendarClass::Day
+
+            array = [Day.new(month, "red", 1), Day.new(year, "Green", 2)]
+                     ^^^
+Did you mean?  Date):
+  
+lib/lol_cal/league_calendar_class.rb:9:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 15:39:00 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2202)
+
+
+  
+NameError (uninitialized constant LolCal::LeagueCalendarClass::Day
+
+            array = [Day.new(month, "red", 1), Day.new(year, "Green", 2)]
+                     ^^^
+Did you mean?  Date):
+  
+lib/lol_cal/league_calendar_class.rb:9:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-05-27 15:39:25 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 110.6ms | Allocations: 5444)
+  Rendered layout layouts/application.html.erb (Duration: 385.4ms | Allocations: 42252)
+Completed 200 OK in 408ms (Views: 394.2ms | ActiveRecord: 0.0ms | Allocations: 45473)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 15:39:40 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2014", "summoner"=>"Celsus", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 3586)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5997)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 6679)
+
+
+Started PUT "/cal" for ::1 at 2022-05-27 15:39:54 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2015", "summoner"=>"jj", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 3502)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5810)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6310)
+
+
+Started GET "/cal" for ::1 at 2022-05-28 10:28:55 -0700
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 132.9ms | Allocations: 5465)
+  Rendered layout layouts/application.html.erb (Duration: 260.6ms | Allocations: 42221)
+Completed 200 OK in 320ms (Views: 278.9ms | ActiveRecord: 0.0ms | Allocations: 45451)
+
+
+Started PUT "/cal" for ::1 at 2022-05-28 10:29:06 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2010", "summoner"=>"heh", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 3572)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5984)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 6646)
+
+
