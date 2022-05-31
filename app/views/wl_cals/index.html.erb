@@ -1,0 +1,28 @@
+<h1>Wl cals</h1>
+
+<%= form_with url: update_calendar_path, method: :put, data: {turbo: false} do |form| %>
+    <%= form.label :month, "Month" %>
+    <%= form.select :month, [["January", 1], ["Febuary", 2], ["March", 3], ["April", 5], ["May", 5], ["June", 6], ["July", 7], ["August", 8], ["September", 9], ["October", 10], ["November", 11], ["December", 12]] %>
+    <br>
+    <%= form.label :year, "Year" %>
+    <%= form.number_field :year, in: 2010..Date.today.year, required: true %>
+    <br>
+    <%= form.label :summoner, "Summoner Name" %>
+    <%= form.text_field :summoner, required: true %>
+    <%= form.submit "Search" %>
+<% end %>
+
+
+<h1> Win Loss on <%= @month %>/<%= @year %>
+<table>
+
+    <tr>
+    <% @days.each do |show| %>
+        <tr>
+            <td> <%= show.dayNumber %> </td>
+            <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+            <br>
+        </tr>
+    <% end %>
+    
+</table>
