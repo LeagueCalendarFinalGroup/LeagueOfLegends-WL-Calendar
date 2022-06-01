@@ -25,8 +25,5 @@ module CONCEPTSAPI
         ary.push(stuff.fetch_match_by_match_id(i,'americas'))
     end
    
-    #for i in ary do
-   #     puts ary
-   # end
-   #^ mass prints the array of json files
+    
 end
