@@ -37,7 +37,6 @@ module LolCal
                             end
                         end
                     end
-                    Files.delete(filename)
                 end
             end
         end

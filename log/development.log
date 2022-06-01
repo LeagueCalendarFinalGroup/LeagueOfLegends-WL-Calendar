@@ -7665,3 +7665,112 @@ Completed 500 Internal Server Error in 1171ms (ActiveRecord: 0.0ms | Allocations
 ActionView::Template::Error (link_tree argument must be a directory):
   
 app/assets/config/manifest.js:1
+Started GET "/cal" for ::1 at 2022-06-01 13:37:32 -0700
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 9841)
+  Rendered layout layouts/application.html.erb (Duration: 903.6ms | Allocations: 84064)
+Completed 500 Internal Server Error in 1268ms (ActiveRecord: 0.0ms | Allocations: 141588)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/jjsup/OneDrive/Documents/GitHub/LeagueOfLegends-WL-Calendar/tmp/cache/assets/sprockets/v4.0.0/Mb/Mb8gwNdAY-4ozDlMWRQUSjIOnvIjhE56-f5nSx63DYA.cache.22100.10108.873571, C:/Users/jjsup/OneDrive/Documents/GitHub/LeagueOfLegends-WL-Calendar/tmp/cache/assets/sprockets/v4.0.0/Mb/Mb8gwNdAY-4ozDlMWRQUSjIOnvIjhE56-f5nSx63DYA.cache)):
+  
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.0.3) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:93:in `fetch'
+sprockets (4.0.3) lib/sprockets/base.rb:71:in `file_digest'
+sprockets (4.0.3) lib/sprockets/unloaded_asset.rb:105:in `dependency_history_key'
+sprockets (4.0.3) lib/sprockets/loader.rb:324:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/context.rb:117:in `load'
+sprockets (4.0.3) lib/sprockets/context.rb:145:in `depend_on_asset'
+sprockets (4.0.3) lib/sprockets/context.rb:185:in `link_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/context.rb:27:in `compute_asset_path'
+actionview (7.0.3) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:41:in `sourcemap_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:34:in `resolved_sourcemap_comment'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:15:in `block in call'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `gsub'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.0.3) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/cal" for ::1 at 2022-06-01 13:37:35 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 7551)
+  Rendered layout layouts/application.html.erb (Duration: 320.7ms | Allocations: 44981)
+Completed 200 OK in 1013ms (Views: 323.7ms | ActiveRecord: 0.0ms | Allocations: 104070)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 13:37:48 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3739)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 6005)
+Completed 200 OK in 548ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 49853)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 13:38:26 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3658)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 5821)
+Completed 200 OK in 39ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 6394)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 13:38:37 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3657)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 5819)
+Completed 200 OK in 43ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 6376)
+
+
