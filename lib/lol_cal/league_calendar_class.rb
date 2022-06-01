@@ -65,6 +65,14 @@ module LolCal
         end
 
         def self.cal_Data(month, year, summonerName)
+            start = 1
+            if (month % 2 == 0)
+                last = 30
+            else
+                last = 31
+            end
+            starttime = Date.new(year, month, start)
+            endtime = Date.new(year, month, last)
             for i in 1.. 31 do
                 for j in 0..Files.count do
                     getData(summonerName, month, i, year, Files[j])
@@ -74,6 +82,6 @@ module LolCal
                 $count = 0
             end
             return Month
-        end
+        end      
     end
 end
