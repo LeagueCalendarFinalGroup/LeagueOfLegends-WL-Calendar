@@ -7815,3 +7815,24 @@ Processing by WlCalsController#index as HTML
 Completed 200 OK in 859ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 58963)
 
 
+Started GET "/cal" for ::1 at 2022-06-01 13:43:00 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5639)
+  Rendered layout layouts/application.html.erb (Duration: 126.5ms | Allocations: 40097)
+Completed 200 OK in 387ms (Views: 134.7ms | ActiveRecord: 0.0ms | Allocations: 96244)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 13:43:16 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3771)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 6047)
+Completed 200 OK in 685ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 59513)
+
+

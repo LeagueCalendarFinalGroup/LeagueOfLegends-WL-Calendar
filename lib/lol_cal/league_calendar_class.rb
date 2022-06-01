@@ -45,19 +45,19 @@ module LolCal
             if(losecount != 0)
                 winrate= wincount.to_f/losecount.to_f
                 winrate = winrate *100
+                if (winrate >= 75)
+                    color = "darkgreen"
+                elsif (winrate > 50 && winrate < 75)
+                    color = "green"
+                elsif (winrate == 50)
+                    color = "white"
+                elsif (winrate < 50 && winrate > 25)
+                    color = "red"
+                elsif (winrate <= 25)
+                    color = "darkred"
+                end
             else
                 winrate = 0
-            end
-            if (winrate >= 75)
-                color = "darkgreen"
-            elsif (winrate > 50 && winrate < 75)
-                color = "green"
-            elsif (winrate == 50)
-                color = "white"
-            elsif (winrate < 50 && winrate > 25)
-                color = "red"
-            elsif (winrate <= 25)
-                color = "darkred"
             end
             tempday = Day.new(winrate, color, daynumber)
             Month[daynumber] = tempday
