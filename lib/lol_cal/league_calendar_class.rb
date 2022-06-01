@@ -50,7 +50,7 @@ module LolCal
                 winrate = 0
             end
             case winrate
-            when (winrate > = 75)
+            when (winrate >= 75)
                 color = "darkgreen"
             when (winrate > 50 && winrate < 75)
                 color = "green"
@@ -58,7 +58,7 @@ module LolCal
                 color = "white"
             when (winrate < 50 && winrate > 25)
                 color = "red"
-            when (winrate =< 25)
+            when (winrate <= 25)
                 color = "darkred"
             end
             tempday = Day.new(winrate, color, daynumber)
