@@ -56,11 +56,12 @@ module LolCal
                 elsif (winrate <= 25)
                     color = "darkred"
                 end
+                tempday = Day.new(winrate, color, daynumber)
+                Month[daynumber] = tempday
             else
-                winrate = 0
+                tempday = Day.new("-", "white", daynumber)
+                Month[daynumber] = tempday
             end
-            tempday = Day.new(winrate, color, daynumber)
-            Month[daynumber] = tempday
         end
 
         def self.cal_Data(month, year, summonerName)
