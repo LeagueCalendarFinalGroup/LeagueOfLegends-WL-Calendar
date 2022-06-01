@@ -7889,3 +7889,967 @@ Processing by WlCalsController#index as HTML
 Completed 200 OK in 690ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 59400)
 
 
+Started GET "/cal" for ::1 at 2022-06-01 14:21:02 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 2960)
+
+
+  
+NoMethodError (undefined method `%' for nil:NilClass
+
+            if (month % 2 == 0)
+                      ^):
+  
+lib/lol_cal/league_calendar_class.rb:63:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:22:34 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 1625)
+
+
+  
+Date::Error (invalid date):
+  
+lib/lol_cal/league_calendar_class.rb:68:in `initialize'
+lib/lol_cal/league_calendar_class.rb:68:in `new'
+lib/lol_cal/league_calendar_class.rb:68:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:24:04 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1625)
+
+
+  
+Date::Error (invalid date):
+  
+lib/lol_cal/league_calendar_class.rb:68:in `initialize'
+lib/lol_cal/league_calendar_class.rb:68:in `new'
+lib/lol_cal/league_calendar_class.rb:68:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:28:19 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 3896)
+
+
+  
+NoMethodError (undefined method `getJsonArray' for LolCal::LeagueCalendarClass:Class
+
+            array = getJsonArray(summonerName,starttime, endtime)
+                    ^^^^^^^^^^^^):
+  
+lib/lol_cal/league_calendar_class.rb:71:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:29:43 -0700
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 4168)
+
+
+  
+NameError (uninitialized constant LolCal::LeagueCalendarClass::RiotApiAccess
+
+            array = RiotApiAccess.getJsonArray(summonerName,starttime, endtime)
+                    ^^^^^^^^^^^^^):
+  
+lib/lol_cal/league_calendar_class.rb:71:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:30:17 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4168)
+
+
+  
+NameError (uninitialized constant LolCal::LeagueCalendarClass::RiotApiAccess
+
+            array = RiotApiAccess::getJsonArray(summonerName,starttime, endtime)
+                    ^^^^^^^^^^^^^):
+  
+lib/lol_cal/league_calendar_class.rb:71:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:31:40 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- excon):
+  
+lib/riot_api_client/client.rb:1:in `<main>'
+lib/lol_cal/api.rb:2:in `<main>'
+lib/lol_cal.rb:3:in `<main>'
+app/controllers/wl_cals_controller.rb:1:in `<main>'
+Started GET "/cal" for ::1 at 2022-06-01 14:33:40 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 10869ms (ActiveRecord: 0.0ms | Allocations: 18291)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Forbidden\", \"status_code\"=>403}]"):
+  
+lib/riot_api_client/client.rb:22:in `get'
+lib/riot_api_client/matches.rb:11:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:05 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:15 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:19 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:28 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:36 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:37 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:38 -0700
+Started POST "/__web_console/repl_sessions/021d929182256d1b5778c1d828927bb5/trace" for ::1 at 2022-06-01 14:36:41 -0700
+Started GET "/cal" for ::1 at 2022-06-01 14:39:19 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 641ms (ActiveRecord: 0.0ms | Allocations: 17508)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Forbidden\", \"status_code\"=>403}]"):
+  
+lib/riot_api_client/client.rb:22:in `get'
+lib/riot_api_client/matches.rb:11:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:39:45 -0700
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 583ms (ActiveRecord: 0.0ms | Allocations: 8454)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Forbidden\", \"status_code\"=>403}]"):
+  
+lib/riot_api_client/client.rb:22:in `get'
+lib/riot_api_client/matches.rb:11:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:43:21 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 0.0ms | Allocations: 13598)
+
+
+  
+RiotApiClient::Errors::ForbiddenError (RiotApiClient::Errors::ForbiddenError):
+  
+lib/riot_api_client/client.rb:26:in `get'
+lib/riot_api_client/summoners.rb:6:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:45:41 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 7909)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 8024)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.0ms | Allocations: 11183)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17: 
+    18: <table>
+    19:     <tr>
+    20:     <% @days.each do |show| %>
+    21:         <tr>
+    22:             <td> <%= show.dayNumber %> </td>
+    23:             <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
+  
+app/views/wl_cals/index.html.erb:20
+Started GET "/cal" for ::1 at 2022-06-01 14:46:30 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 5617)
+  Rendered layout layouts/application.html.erb (Duration: 202.5ms | Allocations: 40126)
+Completed 200 OK in 253ms (Views: 222.9ms | ActiveRecord: 0.0ms | Allocations: 43348)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 14:46:40 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 1011)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Omega Chief"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/summoners.rb:6:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/cal" for ::1 at 2022-06-01 14:46:59 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega Chief", "commit"=>"Search"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 875)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Omega Chief"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/summoners.rb:6:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:47:05 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3845)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 6116)
+Completed 200 OK in 37ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 6465)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 14:47:14 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+Completed 500 Internal Server Error in 861ms (ActiveRecord: 0.0ms | Allocations: 20112)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+lib/riot_api_client/client.rb:25:in `dig'
+lib/riot_api_client/client.rb:25:in `get'
+lib/riot_api_client/matches.rb:4:in `fetch_matches_by_puuid'
+lib/lol_cal/api.rb:21:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/cal" for ::1 at 2022-06-01 14:47:37 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 737ms (ActiveRecord: 0.0ms | Allocations: 12118)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+lib/riot_api_client/client.rb:25:in `dig'
+lib/riot_api_client/client.rb:25:in `get'
+lib/riot_api_client/matches.rb:4:in `fetch_matches_by_puuid'
+lib/lol_cal/api.rb:21:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/cal" for ::1 at 2022-06-01 14:48:28 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 10798ms (ActiveRecord: 0.0ms | Allocations: 20999)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 0\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:11:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:48:42 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 5183)
+  Rendered layout layouts/application.html.erb (Duration: 301.5ms | Allocations: 39636)
+Completed 200 OK in 332ms (Views: 321.1ms | ActiveRecord: 0.0ms | Allocations: 40721)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 14:48:59 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 674ms (ActiveRecord: 0.0ms | Allocations: 10866)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 0\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:11:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started POST "/__web_console/repl_sessions/12964852ac46877daf82f2cfc3c1c419/trace" for ::1 at 2022-06-01 14:50:27 -0700
+Started POST "/__web_console/repl_sessions/12964852ac46877daf82f2cfc3c1c419/trace" for ::1 at 2022-06-01 14:50:48 -0700
+Started GET "/cal" for ::1 at 2022-06-01 14:53:32 -0700
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 5584)
+  Rendered layout layouts/application.html.erb (Duration: 331.1ms | Allocations: 40021)
+Completed 200 OK in 398ms (Views: 354.2ms | ActiveRecord: 0.0ms | Allocations: 43243)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 14:53:42 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1506ms (ActiveRecord: 0.0ms | Allocations: 18925)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 94\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:12:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 14:59:55 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 5593)
+  Rendered layout layouts/application.html.erb (Duration: 326.1ms | Allocations: 40120)
+Completed 200 OK in 392ms (Views: 348.8ms | ActiveRecord: 0.0ms | Allocations: 43342)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:00:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1179ms (ActiveRecord: 0.0ms | Allocations: 18908)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 0\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:12:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:26:in `block in getJsonArray'
+lib/lol_cal/api.rb:25:in `each'
+lib/lol_cal/api.rb:25:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/cal" for ::1 at 2022-06-01 15:03:03 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 952ms (ActiveRecord: 0.0ms | Allocations: 20224)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 0\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:12:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:25:in `block in getJsonArray'
+lib/lol_cal/api.rb:24:in `each'
+lib/lol_cal/api.rb:24:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:03:13 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 5195)
+  Rendered layout layouts/application.html.erb (Duration: 364.6ms | Allocations: 39667)
+Completed 200 OK in 395ms (Views: 382.6ms | ActiveRecord: 0.0ms | Allocations: 40752)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:03:20 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1146ms (ActiveRecord: 0.0ms | Allocations: 10859)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "https://americas.api.riotgames.com/lol/match/v5/matches/[\"status\", {\"message\"=>\"Bad Request - Exception decrypting 0\", \"status_code\"=>400}]"):
+  
+lib/riot_api_client/client.rb:23:in `get'
+lib/riot_api_client/matches.rb:12:in `fetch_match_by_match_id'
+lib/lol_cal/api.rb:25:in `block in getJsonArray'
+lib/lol_cal/api.rb:24:in `each'
+lib/lol_cal/api.rb:24:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started POST "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6/trace" for ::1 at 2022-06-01 15:03:40 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:04:58 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:04:59 -0700
+Started POST "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6/trace" for ::1 at 2022-06-01 15:05:35 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:05:45 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:05:48 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:06:01 -0700
+Started POST "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6/trace" for ::1 at 2022-06-01 15:06:25 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:06:32 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:06:37 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:07:02 -0700
+Started PUT "/__web_console/repl_sessions/3ebd8e57d736a3e2eb7dbf5c7beae5c6" for ::1 at 2022-06-01 15:07:07 -0700
+Started GET "/cal" for ::1 at 2022-06-01 15:07:51 -0700
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 5581)
+  Rendered layout layouts/application.html.erb (Duration: 317.4ms | Allocations: 40138)
+Completed 200 OK in 379ms (Views: 340.7ms | ActiveRecord: 0.0ms | Allocations: 43360)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:07:57 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1081ms (ActiveRecord: 0.0ms | Allocations: 20347)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+lib/riot_api_client/client.rb:25:in `dig'
+lib/riot_api_client/client.rb:25:in `get'
+lib/riot_api_client/matches.rb:4:in `fetch_matches_by_puuid'
+lib/lol_cal/api.rb:21:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:73:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:08:03 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:08:04 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:08:32 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:08:37 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:08:45 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:08:51 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:08:55 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:08:57 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:08:58 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:09:11 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:09:36 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:09:46 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:09:50 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:09:56 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:10:05 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:10:06 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:10:12 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:10:15 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:10:31 -0700
+Started POST "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076/trace" for ::1 at 2022-06-01 15:10:45 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:10:49 -0700
+Started PUT "/__web_console/repl_sessions/795910dd2d8d681bc448b4474834c076" for ::1 at 2022-06-01 15:10:52 -0700
+Started GET "/cal" for ::1 at 2022-06-01 15:11:59 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 5580)
+  Rendered layout layouts/application.html.erb (Duration: 331.1ms | Allocations: 40004)
+Completed 200 OK in 392ms (Views: 354.2ms | ActiveRecord: 0.0ms | Allocations: 43226)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:12:05 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 14763ms (ActiveRecord: 0.0ms | Allocations: 156588)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+lib/lol_cal/league_calendar_class.rb:20:in `read'
+lib/lol_cal/league_calendar_class.rb:20:in `getData'
+lib/lol_cal/league_calendar_class.rb:76:in `block (2 levels) in cal_Data'
+lib/lol_cal/league_calendar_class.rb:75:in `block in cal_Data'
+lib/lol_cal/league_calendar_class.rb:74:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started PUT "/__web_console/repl_sessions/296c4f5c633eb3a3502658d8381ef1a9" for ::1 at 2022-06-01 15:12:43 -0700
+Started PUT "/__web_console/repl_sessions/296c4f5c633eb3a3502658d8381ef1a9" for ::1 at 2022-06-01 15:12:44 -0700
+Started GET "/cal" for ::1 at 2022-06-01 15:13:42 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5587)
+  Rendered layout layouts/application.html.erb (Duration: 117.5ms | Allocations: 40071)
+Completed 200 OK in 156ms (Views: 129.2ms | ActiveRecord: 0.0ms | Allocations: 43293)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:13:52 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 12248ms (ActiveRecord: 0.0ms | Allocations: 158046)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+lib/lol_cal/league_calendar_class.rb:21:in `getData'
+lib/lol_cal/league_calendar_class.rb:76:in `block (2 levels) in cal_Data'
+lib/lol_cal/league_calendar_class.rb:75:in `block in cal_Data'
+lib/lol_cal/league_calendar_class.rb:74:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:15:32 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 5584)
+  Rendered layout layouts/application.html.erb (Duration: 316.8ms | Allocations: 40065)
+Completed 200 OK in 379ms (Views: 340.5ms | ActiveRecord: 0.0ms | Allocations: 43287)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:15:40 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 14780ms (ActiveRecord: 0.0ms | Allocations: 161378)
+
+
+  
+NameError (undefined local variable or method `obj' for LolCal::LeagueCalendarClass:Class
+
+                filename = obj["info"]["gameCreation"]/1000
+                           ^^^):
+  
+lib/lol_cal/league_calendar_class.rb:20:in `getData'
+lib/lol_cal/league_calendar_class.rb:74:in `block (2 levels) in cal_Data'
+lib/lol_cal/league_calendar_class.rb:73:in `block in cal_Data'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:17:00 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 5599)
+  Rendered layout layouts/application.html.erb (Duration: 309.2ms | Allocations: 40099)
+Completed 200 OK in 375ms (Views: 328.2ms | ActiveRecord: 0.0ms | Allocations: 43321)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:17:09 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3629)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 5904)
+Completed 200 OK in 22292ms (Views: 39.9ms | ActiveRecord: 0.0ms | Allocations: 169767)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:17:56 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3552)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 5727)
+Completed 200 OK in 12211ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 161377)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:24:14 -0700
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant LolCal::Month
+
+        Month[a] = Day.new("-", "white", a)
+        ^^^^^
+Did you mean?  Monitor):
+  
+lib/lol_cal/league_calendar_class.rb:14:in `block in <module:LolCal>'
+lib/lol_cal/league_calendar_class.rb:13:in `<module:LolCal>'
+lib/lol_cal/league_calendar_class.rb:6:in `<main>'
+lib/lol_cal.rb:1:in `<main>'
+app/controllers/wl_cals_controller.rb:1:in `<main>'
+Started PUT "/__web_console/repl_sessions/361e8af3eda960a596334ead81ce5dfb" for ::1 at 2022-06-01 15:24:49 -0700
+Started PUT "/__web_console/repl_sessions/361e8af3eda960a596334ead81ce5dfb" for ::1 at 2022-06-01 15:24:49 -0700
+Started PUT "/__web_console/repl_sessions/361e8af3eda960a596334ead81ce5dfb" for ::1 at 2022-06-01 15:24:54 -0700
+Started PUT "/__web_console/repl_sessions/361e8af3eda960a596334ead81ce5dfb" for ::1 at 2022-06-01 15:25:00 -0700
+Started PUT "/cal" for ::1 at 2022-06-01 15:25:15 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 5107)
+  Rendered layout layouts/application.html.erb (Duration: 388.1ms | Allocations: 39559)
+Completed 200 OK in 13777ms (Views: 412.4ms | ActiveRecord: 0.0ms | Allocations: 208383)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:25:29 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 44.6ms | Allocations: 4460)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 7012)
+Completed 200 OK in 130ms (Views: 117.6ms | ActiveRecord: 0.0ms | Allocations: 7919)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:25:29 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3815)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 5978)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 6317)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:25:36 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"1", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3552)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 5728)
+Completed 200 OK in 21877ms (Views: 43.4ms | ActiveRecord: 0.0ms | Allocations: 162180)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:26:34 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 16844ms (ActiveRecord: 0.0ms | Allocations: 155370)
+
+
+  
+NameError (undefined local variable or method `obj' for LolCal::LeagueCalendarClass:Class
+
+                        data = obj["info"]["participants"][a]["summonerName"]
+                               ^^^):
+  
+lib/lol_cal/league_calendar_class.rb:24:in `block in getData'
+lib/lol_cal/league_calendar_class.rb:23:in `getData'
+lib/lol_cal/league_calendar_class.rb:74:in `block (2 levels) in cal_Data'
+lib/lol_cal/league_calendar_class.rb:73:in `block in cal_Data'
+lib/lol_cal/league_calendar_class.rb:72:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:28:23 -0700
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 5578)
+  Rendered layout layouts/application.html.erb (Duration: 327.1ms | Allocations: 40050)
+Completed 200 OK in 389ms (Views: 351.0ms | ActiveRecord: 0.0ms | Allocations: 43271)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:28:35 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3636)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 5912)
+Completed 200 OK in 13757ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 171547)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:29:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3556)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 5732)
+Completed 200 OK in 12606ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 160101)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:29:40 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 3792)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 5955)
+Completed 200 OK in 46ms (Views: 38.4ms | ActiveRecord: 0.0ms | Allocations: 6270)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:29:46 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3556)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 5731)
+Completed 200 OK in 15203ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 164180)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:30:18 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3556)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 5732)
+Completed 200 OK in 22735ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 164441)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:32:05 -0700
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 66.6ms | Allocations: 5108)
+  Rendered layout layouts/application.html.erb (Duration: 424.7ms | Allocations: 39693)
+Completed 200 OK in 24581ms (Views: 453.6ms | ActiveRecord: 0.0ms | Allocations: 220674)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:32:56 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4150)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 6704)
+Completed 200 OK in 16545ms (Views: 56.6ms | ActiveRecord: 0.0ms | Allocations: 168650)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:33:18 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3936)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 6199)
+Completed 200 OK in 38ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 6587)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:33:45 -0700
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 5593)
+  Rendered layout layouts/application.html.erb (Duration: 312.4ms | Allocations: 40069)
+Completed 200 OK in 375ms (Views: 335.3ms | ActiveRecord: 0.0ms | Allocations: 43290)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:34:00 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"4", "year"=>"2022", "summoner"=>"LetsRollDrew", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3629)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 5905)
+Completed 200 OK in 14177ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 173347)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:36:03 -0700
+Started PUT "/cal" for ::1 at 2022-06-01 15:36:03 -0700
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5136)
+  Rendered layout layouts/application.html.erb (Duration: 321.6ms | Allocations: 39645)
+Completed 200 OK in 27428ms (Views: 345.2ms | ActiveRecord: 0.0ms | Allocations: 362879)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3647)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 5914)
+Completed 200 OK in 34890ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 382025)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:37:05 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"4", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 4146)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 6700)
+Completed 200 OK in 12900ms (Views: 51.6ms | ActiveRecord: 0.0ms | Allocations: 168880)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:40:21 -0700
+Started PUT "/cal" for ::1 at 2022-06-01 15:40:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega_Chief", "commit"=>"Search"}
+Started PUT "/cal" for ::1 at 2022-06-01 15:40:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"C", "commit"=>"Search"}
+Started PUT "/cal" for ::1 at 2022-06-01 15:40:21 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+Completed 500 Internal Server Error in 429ms (ActiveRecord: 0.0ms | Allocations: 15090)
+
+
+Completed 500 Internal Server Error in 463ms (ActiveRecord: 0.0ms | Allocations: 16113)
+
+
+  
+RiotApiClient::Errors::SummonerNotFoundError (RiotApiClient::Errors::SummonerNotFoundError):
+  
+lib/riot_api_client/summoners.rb:8:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:69:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+  
+RiotApiClient::Errors::SummonerNotFoundError (RiotApiClient::Errors::SummonerNotFoundError):
+  
+lib/riot_api_client/summoners.rb:8:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:69:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:40:22 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3941)
+  Rendered layout layouts/application.html.erb (Duration: 102.4ms | Allocations: 25422)
+Completed 200 OK in 124ms (Views: 107.3ms | ActiveRecord: 0.0ms | Allocations: 27632)
+
+
+
+NameError: constant WebConsole::SourceLocation not defined
+
+          source_location = SourceLocation.new(binding)
+                            ^^^^^^^^^^^^^^
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:51:in `block in guess_the_first_application_binding'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `each'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `find'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:50:in `guess_the_first_application_binding'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/exception_mapper.rb:30:in `first'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:48:in `initialize'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:34:in `new'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/session.rb:34:in `from'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:30:in `block in call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/rack/logger.rb:40:in `call_app'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/rack/logger.rb:25:in `block in call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activesupport-7.0.3/lib/active_support/tagged_logging.rb:114:in `block in tagged'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activesupport-7.0.3/lib/active_support/tagged_logging.rb:38:in `tagged'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activesupport-7.0.3/lib/active_support/tagged_logging.rb:114:in `tagged'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/rack/logger.rb:25:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/activesupport-7.0.3/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/static.rb:23:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/engine.rb:530:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/configuration.rb:252:in `call'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/request.rb:77:in `block in handle_request'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/request.rb:76:in `handle_request'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/server.rb:441:in `process_client'
+	from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/puma-5.6.4/lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3652)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5948)
+Completed 200 OK in 13623ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 561864)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3557)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5720)
+Completed 200 OK in 13904ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 580140)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:41:01 -0700
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega_Chief", "commit"=>"Search"}
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.0ms | Allocations: 14531)
+
+
+  
+RiotApiClient::Errors::SummonerNotFoundError (RiotApiClient::Errors::SummonerNotFoundError):
+  
+lib/riot_api_client/summoners.rb:8:in `fetch_summoner_by_name'
+lib/lol_cal/api.rb:15:in `getJsonArray'
+lib/lol_cal/league_calendar_class.rb:69:in `cal_Data'
+app/controllers/wl_cals_controller.rb:6:in `index'
+Started GET "/cal" for ::1 at 2022-06-01 15:41:09 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 5184)
+  Rendered layout layouts/application.html.erb (Duration: 315.1ms | Allocations: 39640)
+Completed 200 OK in 339ms (Views: 327.9ms | ActiveRecord: 0.0ms | Allocations: 40724)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:41:18 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"OmegaChief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3571)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 5748)
+Completed 200 OK in 12925ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 161703)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:41:49 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"CelsusC", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3558)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 5734)
+Completed 200 OK in 13670ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 167060)
+
+
+Started GET "/cal" for ::1 at 2022-06-01 15:43:52 -0700
+Processing by WlCalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3793)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 5955)
+Completed 200 OK in 38ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 6266)
+
+
+Started PUT "/cal" for ::1 at 2022-06-01 15:44:01 -0700
+Processing by WlCalsController#index as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "month"=>"5", "year"=>"2022", "summoner"=>"Omega%20Chief", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering wl_cals/index.html.erb within layouts/application
+  Rendered wl_cals/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3552)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 5727)
+Completed 200 OK in 14383ms (Views: 48.4ms | ActiveRecord: 0.0ms | Allocations: 164278)
+
+

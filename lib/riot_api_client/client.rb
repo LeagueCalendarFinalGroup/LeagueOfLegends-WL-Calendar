@@ -1,5 +1,6 @@
 require 'excon'
 require 'json'
+require 'uri'
 
 require 'riot_api_client/matches'
 require 'riot_api_client/summoners'
@@ -22,7 +23,7 @@ module RiotApiClient
       request = Excon.get(path, headers: base_headers, query: query)
       resp = JSON.parse(request.body)
       #if (resp.dig('status', 'status_code') && resp['status']['status_code'] == 403)  
-        #raise RiotApiClient::Errors::ForbiddenError
+      #  raise RiotApiClient::Errors::ForbiddenError
       #end
 
       resp

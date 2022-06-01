@@ -1,6 +1,7 @@
 require "rails"
 require 'rubygems'
 require 'json'
+require 'date'
 
 module LolCal
     $winrate = 0
@@ -8,22 +9,21 @@ module LolCal
     $wincount = 0
     Data = Struct.new(:daynumber, :month, :summonername, :year)
     Day = Struct.new(:winrate, :color, :dayNumber)
-    Month = Array.new(31)
+    $monthData = Array.new(31)
     for a in 0..31 do
-        Month[a] = Day.new("-", "white", a)
+        $monthData[a] = Day.new("-", "white", a)
     end
+
     class LeagueCalendarClass
         def self.getData (suMMONERNAME, mONTH, dAY, yEAR, filename)
             if filename != nil
-                json = File.read(filename)
-                obj = JSON.parse(json)
-                temp = obj["info"]["gameCreation"]/1000
+                temp = filename["info"]["gameCreation"]/1000
                 ts = Time.at(temp)
                 if ts.year == yEAR.to_i && ts.month == mONTH.to_i && ts.day == dAY
                     for a in 0..9 do
-                        data = obj["info"]["participants"][a]["summonerName"]
+                        data = filename["info"]["participants"][a]["summonerName"]
                         if ((data <=> suMMONERNAME) == 0)
-                            if (obj["info"]["participants"][a]["win"] == true)
+                            if (filename["info"]["participants"][a]["win"] == true)
                                 $wincount = $wincount + 1
                                 $count = $count + 1
                             else
@@ -51,32 +51,32 @@ module LolCal
                     color = "darkred"
                 end
                 tempday = Day.new(winrate, color, daynumber)
-                Month[daynumber] = tempday
+                $monthData[daynumber] = tempday
             else
                 tempday = Day.new("-", "white", daynumber)
-                Month[daynumber] = tempday
+                $monthData[daynumber] = tempday
             end
         end
 
         def self.cal_Data(month, year, summonerName)
+            if(summonerName != nil)
             start = 1
-            if (month % 2 == 0)
+            if (month.to_i % 2 == 0)
                 last = 30
             else
                 last = 31
             end
-            starttime = Date.new(year, month, start)
-            endtime = Date.new(year, month, last)
-            array = getJsonArray(summonerName,starttime, endtime)
+            array = RiotApiAccess::getJsonArray(summonerName)
             for i in 1.. 31 do
                 for j in 0..array.count do
                     getData(summonerName, month, i, year, array[j])
                 end
-                getDay($wincount, $count, i)
+                getDay($wincount, $count, i, )
                 $wincount = 0
                 $count = 0
             end
-            return Month
+        end
+            return $monthData
         end      
     end
 end
