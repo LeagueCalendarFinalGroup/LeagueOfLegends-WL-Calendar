@@ -7,17 +7,17 @@ module LolCal
     $count = 0
     $wincount = 0
     Data = Struct.new(:daynumber, :month, :summonername, :year)
-    Day = Struct.new(:dayNumber, :color, :winrate)
+    Day = Struct.new(:winrate, :color, :dayNumber)
     Month = Array.new(31)
     Files = Array.new()
     for a in 0..31 do
-        Month[a] = Day.new(a, "white", 50)
+        Month[a] = Day.new(0, "red", a)
     end
-    Files[0] = 'input5.json'
-    Files[1] = 'input.json'
-    Files[2] = 'input2.json'
-    Files[3] = 'input3.json'
-    Files[4] = 'input4.json'
+    Files[0] = 'C:\Final Project\input5.json'
+    Files[1] = 'C:\Final Project\input.json'
+    Files[2] = 'C:\Final Project\input2.json'
+    Files[3] = 'C:\Final Project\input3.json'
+    Files[4] = 'C:\Final Project\input4.json'
     class LeagueCalendarClass
         def self.getData (suMMONERNAME, mONTH, dAY, yEAR, filename)
             if filename != nil
@@ -25,7 +25,7 @@ module LolCal
                 obj = JSON.parse(json)
                 temp = obj["info"]["gameCreation"]/1000
                 ts = Time.at(temp)
-                if ts.year == yEAR && ts.month == mONTH && ts.day == dAY
+                if ts.year == yEAR.to_i && ts.month == mONTH.to_i && ts.day == dAY
                     for a in 0..9 do
                         data = obj["info"]["participants"][a]["summonerName"]
                         if ((data <=> suMMONERNAME) == 0)
@@ -56,7 +56,7 @@ module LolCal
             else
                 color = "red"
             end
-            tempday = Day.new(daynumber, color, winrate)
+            tempday = Day.new(winrate, color, daynumber)
             Month[daynumber] = tempday
         end
 
