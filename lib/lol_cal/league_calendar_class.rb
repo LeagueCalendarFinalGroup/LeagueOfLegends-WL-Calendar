@@ -65,9 +65,10 @@ module LolCal
         end
 
         def self.cal_Data(month, year, summonerName)
+            array = getJsonArray(summonerName,start_time, end_time)
             for i in 1.. 31 do
-                for j in 0..Files.count do
-                    getData(summonerName, month, i, year, Files[j])
+                for j in 0..ary.count do
+                    getData(summonerName, month, i, year, ary[j])
                 end
                 getDay($wincount, $count, i)
                 $wincount = 0

@@ -7,7 +7,7 @@ module LolCal
 
     class RiotApiAccess
         
-        def getJsonArray(m_summonerID)
+        def self.getJsonArray(m_summonerID)
             puts "Enter summoner ID: "
             name="LetsRollDrew"
             
