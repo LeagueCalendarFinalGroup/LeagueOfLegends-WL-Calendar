@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+#Step 1 bundle install
+
+
+gem "riot_api_client", path: "./riot_api_client"
+
+
+
+#bundle config --delete local.riot_api_client
+#bundle config set --local path 'riot_api_client/bundle'
+#bundle install --local

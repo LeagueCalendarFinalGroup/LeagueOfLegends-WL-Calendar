@@ -1,0 +1,17 @@
+PATH
+  remote: riot_api_client
+  specs:
+    riot_api_client (69.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  x64-mingw-ucrt
+
+DEPENDENCIES
+  riot_api_client!
+
+BUNDLED WITH
+   2.3.7
