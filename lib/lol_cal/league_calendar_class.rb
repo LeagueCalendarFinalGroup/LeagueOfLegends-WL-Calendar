@@ -13,11 +13,11 @@ module LolCal
     for a in 0..31 do
         Month[a] = Day.new(0, "red", a)
     end
-    Files[0] = 'C:\Final Project\input5.json'
-    Files[1] = 'C:\Final Project\input.json'
-    Files[2] = 'C:\Final Project\input2.json'
-    Files[3] = 'C:\Final Project\input3.json'
-    Files[4] = 'C:\Final Project\input4.json'
+    Files[0] = 'input5.json'
+    Files[1] = 'input.json'
+    Files[2] = 'input2.json'
+    Files[3] = 'input3.json'
+    Files[4] = 'input4.json'
     class LeagueCalendarClass
         def self.getData (suMMONERNAME, mONTH, dAY, yEAR, filename)
             if filename != nil
