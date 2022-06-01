@@ -13,16 +13,15 @@
 <% end %>
 
 
-<h1> Win Loss on <%= @month %>/<%= @year %>
-<table>
+<h1> Win Loss on <%= @month %>/<%= @year %> </h1>
 
+<table>
     <tr>
     <% @days.each do |show| %>
         <tr>
             <td> <%= show.dayNumber %> </td>
             <td style="background-color: <%= show.color %>;"> <%=show.winrate %> </td>
-            <br>
+            
         </tr>
-    <% end %>
-    
+    <% end %> 
 </table>
