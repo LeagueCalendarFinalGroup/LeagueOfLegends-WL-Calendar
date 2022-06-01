@@ -7,7 +7,7 @@ module LolCal
 
     class RiotApiAccess
         
-        def getJsonArray(m_summonerID,start_time, end_time)
+        def self.getJsonArray(m_summonerID,start_time, end_time)
             
             
             stuff = RiotApiClient::Client.new("RGAPI-a7519216-7eac-433b-a20b-439e33821964")
@@ -21,10 +21,11 @@ module LolCal
             matchHistory = stuff.fetch_matches_by_puuid(puiid,'americas',start_time,end_time)
 
             ary = Array.new
-            Array.new(20)
+            Array.new()
             for i in matchHistory do
                 ary.push(stuff.fetch_match_by_match_id(i,'americas'))
             end
+            return ary
         end
     end
 

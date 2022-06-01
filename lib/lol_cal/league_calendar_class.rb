@@ -9,15 +9,9 @@ module LolCal
     Data = Struct.new(:daynumber, :month, :summonername, :year)
     Day = Struct.new(:winrate, :color, :dayNumber)
     Month = Array.new(31)
-    Files = Array.new()
     for a in 0..31 do
         Month[a] = Day.new("-", "white", a)
     end
-    Files[0] = 'lib/lol_cal/input5.json'
-    Files[1] = 'lib/lol_cal/input.json'
-    Files[2] = 'lib/lol_cal/input2.json'
-    Files[3] = 'lib/lol_cal/input3.json'
-    Files[4] = 'lib/lol_cal/input4.json'
     class LeagueCalendarClass
         def self.getData (suMMONERNAME, mONTH, dAY, yEAR, filename)
             if filename != nil
@@ -73,9 +67,10 @@ module LolCal
             end
             starttime = Date.new(year, month, start)
             endtime = Date.new(year, month, last)
+            array = getJsonArray(summonerName,starttime, endtime)
             for i in 1.. 31 do
-                for j in 0..Files.count do
-                    getData(summonerName, month, i, year, Files[j])
+                for j in 0..array.count do
+                    getData(summonerName, month, i, year, array[j])
                 end
                 getDay($wincount, $count, i)
                 $wincount = 0
