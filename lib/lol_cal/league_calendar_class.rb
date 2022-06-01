@@ -11,7 +11,7 @@ module LolCal
     Month = Array.new(31)
     Files = Array.new()
     for a in 0..31 do
-        Month[a] = Day.new(0, "white", a)
+        Month[a] = Day.new("-", "white", a)
     end
     Files[0] = 'lib/lol_cal/input5.json'
     Files[1] = 'lib/lol_cal/input.json'
