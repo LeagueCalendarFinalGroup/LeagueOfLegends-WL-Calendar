@@ -49,12 +49,17 @@ module LolCal
             else
                 winrate = 0
             end
-            if (winrate > 50)
+            case winrate
+            when (winrate > = 75)
+                color = "darkgreen"
+            when (winrate > 50 && winrate < 75)
                 color = "green"
-            elsif (winrate == 50)
+            when (winrate == 50)
                 color = "white"
-            else
+            when (winrate < 50 && winrate > 25)
                 color = "red"
+            when (winrate =< 25)
+                color = "darkred"
             end
             tempday = Day.new(winrate, color, daynumber)
             Month[daynumber] = tempday
